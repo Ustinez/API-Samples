@@ -282,8 +282,8 @@
     var mesh = scn.getObjectByGuid( in_meshGuid );
     var mat = scn.getObjectByGuid( in_materialGuid );
 
-    var matParam = mesh.properties.getProperty("Materials").getParameterByName("Material");
-    matParam.value = mat.properties.getParameterByName("GUID").value;
+    var matParam = mesh.properties.getProperty("Materials").getParameter('tmaterial');
+    matParam.value = mat.guid;
   };
 
   /**
